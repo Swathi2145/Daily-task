@@ -1,0 +1,204 @@
+<!-- Task 1: The Image Rotator
+ Objective: Create an image element and a button. When the user clicks the button, use setAttribute to
+change the src to a new image URL and the alt text to "New Image Loaded -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<img id="img" src="assimg.jpg">
+<button id="btn">Change Image</button>
+
+<script>
+  const img = document.getElementById("img");
+  const btn = document.getElementById('btn');
+
+  btn.addEventListener('click', () => {
+    img.setAttribute("src", "assimag2");
+    });
+</script>
+
+</body>
+</html> -->
+
+
+
+ <!-- Select an element and use setAttribute("style", ...) to change its border, font color, and padding -->
+<!-- simultaneously based on a user-defined color input -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="color" id="userColor" value="#ff0000">
+<button id="applyBtn">Apply Custom Style</button>
+
+<div id="targetBox" style="margin-top: 20px;">
+  Style me!
+</div>
+
+<script>
+  const colorPicker = document.getElementById('userColor');
+  const btn = document.getElementById('applyBtn');
+  const box = document.getElementById('targetBox');
+
+  btn.addEventListener('click', () => {
+    const chosenColor = colorPicker.value;
+    box.setAttribute("style", `border: 2px solid ${chosenColor}; color: ${chosenColor}; padding: 20px;`);
+  });
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- The To-Do Header: 
+ Create an <h1> element with text "My To-Do List" and append it to the <body>.
+ -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const head = document.createElement('h1');
+    head.textContent = 'My To-Do List';
+    document.body.appendChild(head);
+</script>
+</html> -->
+
+<!-- Given an existing list <ul>, create an <li> with text "Urgent Task" 
+    and use insertBefore to place it as the first item. -->
+
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul id="ul">
+            <li id="li"> task 1</li>
+            <li> task 2</li>
+            <li> task 3</li> -->
+            <!-- <li> task 4</li>
+        </ul>
+    </body>
+    <script>
+        const list = document.getElementById('ul');
+        const task = document.getElementById('li');
+        task.textContent = 'Urgent Task';
+
+        list.insertBefore(task,li);
+
+    </script>
+    </html> -->
+
+
+    <!-- Add a button that removes the last child element of a container
+      <div> when clicked. -->
+
+<!-- 
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <div id="div"></div>
+            <button id="btn"> click mee </button>
+        </body>
+        <script>
+            const div = document.getElementById('div');
+            const btn1 = document.getElementById('btn');
+            btn1.addEventListener("click" , () => {
+            const lastChild = container.lastElementChild;
+            if (lastChild) {
+              div.removeChild(lastChild);
+          }
+        });
+ 
+        </script>
+        </html> -->
+
+        <!-- Create a <span>, 
+            set its text to "New!", and
+             insert it into a <div> 
+                right before an existing <p> tag. -->
+
+<!-- 
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   </head>
+   <body>
+      <div>
+          <p> para </p>
+      </div>
+   </body>
+        <script>
+  const cont = document.querySelector('div');
+  const para = document.querySelector('p');
+  
+  const span = document.createElement('span');
+  span.textContent = "New";
+  
+  container.insertBefore(span, para);
+     </script>
+   </html> -->
+    
+
+   <!-- Use removeChild() to remove a specific list item, 
+    then store it in a variable and append() it to a different list -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <ul id="ul">
+  <li id="list-item">Urgent Task</li>
+  <li>Task</li>
+</ul>
+
+<ul id="lists-list">
+  <li>Tasks</li>
+</ul>
+</body>
+       
+
+<script>
+  const ul = document.getElementById("ul");
+  const tasks = document.getElementById("lists-list");
+  const remove = document.getElementById("list-item");
+
+  const movedItem = source.removeChild(remove);
+
+  destination.append(movedItem);
+</script>
+
+</html> -->
